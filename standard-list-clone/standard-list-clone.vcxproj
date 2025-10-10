@@ -123,9 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="push-test.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pop.cpp" />
     <ClCompile Include="push.cpp" />
-    <ClCompile Include="push.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pop.h" />
+    <ClInclude Include="push.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
