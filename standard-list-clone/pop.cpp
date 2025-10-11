@@ -34,3 +34,30 @@ int* pop_back(int* array, int* pSize)
 
 	return array;
 }
+
+int* pop_front(int* array, int* pSize)
+{
+	//make an array that is smaller by one element
+	int* smallerArray = new int[*pSize - 1];
+
+	//decrease size by one(such that we don't access unintialised memory)
+	*pSize = *pSize - 1;
+
+	//remove the first element
+	for (int i = 0; i < *pSize; i++)
+	{
+		array[i] = array[i + 1]; 
+	}
+
+	//copy elements from old array to the smaller array
+	for (int i = 0; i < *pSize; i++)
+	{
+		smallerArray[i] = array[i];
+	}
+
+	//modify values
+	delete[] array;
+	array = smallerArray;
+
+	return array;
+}

@@ -63,6 +63,22 @@ int main()
 		cout << array[i] << " ";
 	}
 
+	cout << "\n\n----------------------------------\n\n";
+	cout << "Before pop_front: ";
+	for (int i = 0; i < *pSize; i++)
+	{
+		cout << array[i] << " ";
+	}
+
+	//pop_front function is called
+	array = pop_front(array, pSize);
+
+	cout << "\nAfter pop_front: ";
+	for (int i = 0; i < *pSize; i++)
+	{
+		cout << array[i] << " ";
+	}
+
 	cout << "\n";
 	return 0;
 }
